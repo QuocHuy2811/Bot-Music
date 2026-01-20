@@ -1,0 +1,34 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+lavalink:
+  server:
+    password: "youshallnotpass"
+    sources:
+      youtube: false        # TẮT cái cũ để tránh xung đột
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+    bufferDurationMs: 400
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 10
+    resamplingQuality: HIGH
+
+plugins:
+  youtube:
+    enabled: true          # BẬT Plugin mới
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    pot: # Phần này giúp tránh bị YouTube chặn IP (quan trọng)
+      token: "your_token_here" # Tạm thời để trống hoặc tìm hiểu về YouTube POT token sau
+  lavasrc:
+    providers:
+      - "ytsearch:%QUERY%"
+    sources:
+      spotify: false
+      applemusic: false
+      deezer: false
