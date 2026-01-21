@@ -18,6 +18,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Sửa lỗi định dạng file script và cấp quyền chạy
+# Sửa lỗi định dạng file script và cấp quyền chạy
+RUN apt-get update && apt-get install -y dos2unix
 RUN dos2unix start.sh && chmod +x start.sh
 
 # Lệnh khởi động
