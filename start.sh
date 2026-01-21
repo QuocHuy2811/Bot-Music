@@ -1,10 +1,4 @@
-#!/bin/bash
-
-# Chạy Lavalink ở chế độ nền
-java -jar Lavalink.jar &
-
-# Chờ Lavalink khởi động (khoảng 20 giây)
-sleep 20
-
-# Chạy Bot Python
+# Giới hạn Java chỉ được dùng tối đa 400MB RAM
+java -Xmx400M -jar Lavalink.jar &
+sleep 30
 python main.py
